@@ -4,4 +4,9 @@
 --success-color: #43b581;
 --danger-color: #982929;
 --bd-blue: var(--main-color);
+--main-font: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+--code-font: Consolas, Liberation Mono, Menlo, Courier, monospace;
+--font-display: var(--main-font);
+--text-normal: rgb(220, 221, 222);
+--text-muted: rgb(114, 118, 125);
 }
