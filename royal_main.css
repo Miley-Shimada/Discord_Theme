@@ -1,0 +1,203 @@
+/**
+ * @name Royal
+ * @author Miley
+ * @version 0.0.2
+ * @description Fioletowy theme
+ * @source https://github.com/Miley-Shimada/Discord_Theme
+*/
+
+
+:root{ /*zmienne kolorów i inne wyglądy discorda do zmiany*/
+  --obramowki-kolor: #b901e2;
+  --color_zaznaczony_kanal: rgb(255, 0, 170);
+  --main-color: rgb(66, 66, 52);
+  --icon_color: rgb(4, 255, 4);
+  --backgroung_image_blur: 5px;
+  --grubosc_obramowek_tekstu_guzikow: 3px;
+  --grubosc_obramowek_okien: 2px;
+  --przezroczystosc_tla_programu_i_kolor: rgba(10, 0, 12, 0.2); /* podawać liczby z kropką */
+  --color_font: red;
+  --color_folder_font: #b901e2;
+  --color_wybranego_kanalu_i_przezroczystosc: rgba(114, 6, 187, 0.4);
+  --bd_image_url: url('https://i.imgur.com/aSr9Dg4.jpeg');
+  --menu_icon: url('https://i.imgur.com/AXgjrd6.png');
+  --home-position: center;
+}
+
+
+
+
+/* Ustawienie tła dla całego programu Discord oraz animacji obramówki */
+body {
+  background-image: var(--bd_image_url);
+  background-size: cover; /* Dopasowanie obrazu do rozmiaru okna */
+  background-position: center; /* Wycentrowanie obrazu */
+  background-repeat: no-repeat; /* Brak powtarzania obrazu */
+  background-attachment: fixed; /* Utrzymanie obrazu w miejscu podczas przewijania */
+  backdrop-filter: blur(var(--backgroung_image_blur)) !important;
+  
+  
+
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: 0; /* Umieszcza pseudo-element za zawartością */
+  border: 6px solid;
+  background-size: 300% 300%;
+  animation: borderAnimation 5s linear infinite;
+  border-radius: 10px; /* Opcjonalnie: zaokrąglone rogi */
+}
+@keyframes borderAnimation {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: yellow;
+  }
+  50% {
+    border-color: green;
+  }
+  75% {
+    border-color: blue;
+  }
+  100% {
+    border-color: purple;
+  }
+}
+
+
+
+
+
+
+:root {
+/*obramówka okna czatu kolor brany z zmiennej "--obramowki-kolor"*/
+.chatContent_a7d72e{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor) !important; border-radius: 10px;}
+/* obramówki kolor do pisania, przyciski */
+.textArea_d0696b{border: clamp(1px, calc(var(--grubosc_obramowek_tekstu_guzikow) - 1px), var(--grubosc_obramowek_tekstu_guzikow)) solid var(--obramowki-kolor);border-left: none;border-top: none;border-bottom: none;}
+.scrollableContainer_d0696b{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);background-color: rgb(17, 17, 17);}
+.buttonContainer_df39bd{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);border-radius: 10px;}
+.sendIcon_a06035{color: var(--obramowki-kolor);}
+.searchBar_a46bef{border: 1px solid var(--obramowki-kolor);border-radius: 5px;}
+.searchBarComponent_f0963d{border: 1px solid var(--obramowki-kolor);border-radius: 5px;}
+.menu_d90b3d{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 10px;}
+.wrapper_c6ee36{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 8px;}
+.emojiPicker_c6ee36{border-radius: 8px;}
+.categoryList_c6ee36{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 5px;border-left: none;border-bottom: none;}
+.inner_effbe2{border: 1px solid var(--obramowki-kolor);border-radius: 8px;padding: 0px;}
+.panels_a4d4d9{border-radius: 10px;background-color: rgba(0, 0, 0, 0.4);}
+/*ikonka profilu i w jaka gre sie gra obramowka*/
+.container_b2ca13{border-radius: 15px;background-color: rgba(0, 0, 0, 0.6);}    .activityPanel_a4d4d9{border-radius: 15px;background-color: rgba(0, 0, 0, 0.6);}
+/*mini okienko profilu lub podglad szybki profilu i zmiana statusu*/
+.biteSizeInnerThemed_c69a7b{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 30px;}   .userProfileOuterUnthemed_c69a7b{background-color: transparent;}
+.modalRoot_d5bea8{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 8px;}
+.visibleContainer_d0a252{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 15px;}
+.container_b2ca13 .avatar_b2ca13{border: 2px solid var(--obramowki-kolor);border-radius: 15px;}
+/*wyswietlanie folderow na serwerze*/
+.name_a08117{
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--main-color);
+font-weight: 700;
+text-align: center;
+transition: all .3s ease-in-out;
+opacity: 1;
+font-size: 15px;
+color: var(--color_folder_font)
+}
+
+
+/* obramówka wybranego kanału i jego kolor  */
+.modeSelected_d8bfb3 .link_d8bfb3, .modeSelected_d8bfb3:hover .link_d8bfb3 {
+  background: var(--color_wybranego_kanalu_i_przezroczystosc);
+  -webkit-clip-path: polygon(var(--cp-size) 0, 100% 0, 100% calc(100% - var(--cp-size)), calc(100% - var(--cp-size)) 100%, 0 100%, 0 var(--cp-size));
+          clip-path: polygon(var(--cp-size) 0, 100% 0, 100% calc(100% - var(--cp-size)), calc(100% - var(--cp-size)) 100%, 0 100%, 0 var(--cp-size));
+  --cp-size: 10px;
+  margin-right: 4px !important;
+}
+/* kolor tekstu zaznaczonego kanalu */
+.modeSelected_d8bfb3 .name_d8bfb3, .modeSelected_d8bfb3:hover .name_d8bfb3, .modeConnected_d8bfb3 .name_d8bfb3, .modeConnected_d8bfb3:hover .name_d8bfb3, .modeUnreadImportant_d8bfb3 .name_d8bfb3, .modeUnreadImportant_d8bfb3:hover .name_d8bfb3{
+color: var(--color_zaznaczony_kanal);
+}
+/* strzałki przy folderach */
+.icon_a08117{
+  width: 18px;
+  height: 18px;
+  color: var(--color_folder_font);
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* USTAWIENIE CAŁEGO PROGRAMU PRZEŹROCZYSTEGO ABY WIDZIEĆ ZDJĘCIE BACKGROUNTOWE */
+#app-mount,
+#app-mount :where(.app_a01fb1,
+.bg_d4b6c5,
+.guilds_a4d4d9,
+.scroller_fea3ef,
+.sidebar_a4d4d9,
+.container_ee69e0,
+.panels_a4d4d9,
+.chat_a7d72e,
+.chat_a7d72e,
+.title_a7d72e,
+.container_cbd271,
+.container-1Lk8p7,
+.member_cbd271,
+.members_cbd271,
+.container-3wLKDe,
+.mainCard_a6d69a,
+.container_c2739c,
+.privateChannels_f0963d,
+.scroller_c47fa9,
+.container_fc4f04.themed_fc4f04,
+.nowPlayingColumn_c2739c,
+.container_bf550a,
+.wrapper_cd82a7,
+.inset_ac5d22,
+.section_cd82a7,
+.scroller__244e5,
+.applicationStore_cecc86,
+.bigPerkCard-1uwmWV,
+.smallPerkCard-2sX_--,
+.pageWrapper_a3a4ce,
+.searchBar_a46bef,
+.searchBar_f0963d,
+.contentRegion_c25c6d,
+.contentRegionScroller_c25c6d,
+.chatTarget_d1c246,
+.container_d1c246,
+.container_b385c8,
+.scroller_e2e187,
+.chatContent_a7d72e,
+.scrollerInner_e2e187, /*tło czatu przezroczyste*/
+.scrollerInner_e2e187 > .wrapper_ba0ffb,
+.scrollerInner_e2e187 > .wrapper_ba0ffb .wrapper_b75bb9) {
+  /*background-color: transparent;*/
+  background-color: var(--przezroczystosc_tla_programu_i_kolor) !important;
+}
+
+/*usunięcie czarnego gówna na górze ekranu :)*/
+.theme-dark .children_fc4f04:after {background:rgba(0, 0, 0, 0);}
+
+
