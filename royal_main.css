@@ -12,6 +12,8 @@
   --color_zaznaczony_kanal: rgb(255, 0, 170);
   --main-color: rgb(66, 66, 52);
   --icon_color: rgb(4, 255, 4);
+  --color_tytulow_naglowkow: #b901e2;
+  --color_neon_detail: #b901e2;
   --backgroung_image_blur: 5px;
   --grubosc_obramowek_tekstu_guzikow: 3px;
   --grubosc_obramowek_okien: 2px;
@@ -77,20 +79,24 @@ body::before {
 
 :root {
 /*obramówka okna czatu kolor brany z zmiennej "--obramowki-kolor"*/
-.chatContent_a7d72e{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor) !important; border-radius: 10px;}
+.chatContent_a7d72e{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor) !important; border-radius: 15px;box-shadow: 0px 0px 10px var(--color_neon_detail), 0px -8px 20px var(--color_neon_detail);}
 /* obramówki kolor do pisania, przyciski */
 .textArea_d0696b{border: clamp(1px, calc(var(--grubosc_obramowek_tekstu_guzikow) - 1px), var(--grubosc_obramowek_tekstu_guzikow)) solid var(--obramowki-kolor);border-left: none;border-top: none;border-bottom: none;}
-.scrollableContainer_d0696b{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);background-color: rgb(17, 17, 17);}
-.buttonContainer_df39bd{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);border-radius: 10px;}
+.scrollableContainer_d0696b{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);background-color: rgb(17, 17, 17);box-shadow: 0px 0px 10px var(--color_neon_detail),0px 0px 20px var(--color_neon_detail);}
+.buttonContainer_df39bd{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);border-radius: 10px;box-shadow: 0px 0px 10px var(--color_neon_detail),0px 0px 20px var(--color_neon_detail);}
 .sendIcon_a06035{color: var(--obramowki-kolor);}
 .searchBar_a46bef{border: 1px solid var(--obramowki-kolor);border-radius: 5px;}
 .searchBarComponent_f0963d{border: 1px solid var(--obramowki-kolor);border-radius: 5px;}
 .menu_d90b3d{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 10px;}
 .wrapper_c6ee36{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 8px;}
 .emojiPicker_c6ee36{border-radius: 8px;}
+/* okno aktywnosci i aplikacji */
+.positionContainer_ec62fd{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);border-radius: 8px;box-shadow: 0px 0px 10px var(--color_neon_detail),0px 0px 20px var(--color_neon_detail);}
+.container_c18ec9{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 11px;}
 .categoryList_c6ee36{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 5px;border-left: none;border-bottom: none;}
 .inner_effbe2{border: 1px solid var(--obramowki-kolor);border-radius: 8px;padding: 0px;}
 .panels_a4d4d9{border-radius: 10px;background-color: rgba(0, 0, 0, 0.4);}
+.drawerSizingWrapper_af5dbb{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 8px;box-shadow: 0px 0px 10px var(--color_neon_detail),0px 0px 20px var(--color_neon_detail);}
 /*ikonka profilu i w jaka gre sie gra obramowka*/
 .container_b2ca13{border-radius: 15px;background-color: rgba(0, 0, 0, 0.6);}    .activityPanel_a4d4d9{border-radius: 15px;background-color: rgba(0, 0, 0, 0.6);}
 /*mini okienko profilu lub podglad szybki profilu i zmiana statusu*/
@@ -98,18 +104,28 @@ body::before {
 .modalRoot_d5bea8{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 8px;}
 .visibleContainer_d0a252{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 15px;}
 .container_b2ca13 .avatar_b2ca13{border: 2px solid var(--obramowki-kolor);border-radius: 15px;}
+/* tekst nazwa serwera */
+.name_fd6364{
+  color: var(--color_tytulow_naglowkow);
+  font-size: 20px;
+  text-shadow: 0px 10px 40px var(--color_tytulow_naglowkow),0px 0px 15px var(--color_tytulow_naglowkow);
+  opacity: 1;
+  font-weight: 700;
+}
+/* tekst nazwy kanalu gdy w niego wejdziemy na srodku okna */
+.title_fc4f04{color: var(--color_tytulow_naglowkow);text-shadow: 0px 1px 20px var(--color_tytulow_naglowkow);opacity: 1;font-weight: 700;font-size: 18px;}
 /*wyswietlanie folderow na serwerze*/
 .name_a08117{
 display: flex;
 align-items: center;
 justify-content: center;
-color: var(--main-color);
 font-weight: 700;
 text-align: center;
 transition: all .3s ease-in-out;
 opacity: 1;
 font-size: 15px;
-color: var(--color_folder_font)
+color: var(--color_folder_font);
+text-shadow: 0px 1px 20px var(--color_folder_font);
 }
 
 
