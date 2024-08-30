@@ -21,9 +21,11 @@
   --color_font: red;
   --color_folder_font: #b901e2;
   --color_wybranego_kanalu_i_przezroczystosc: rgba(114, 6, 187, 0.4);
-  --bd_image_url: url('https://i.imgur.com/aSr9Dg4.jpeg');
+  --bd_image_url: url('https://i.imgur.com/qZJakb7.jpeg');
   --menu_icon: url('https://i.imgur.com/AXgjrd6.png');
   --home-position: center;
+  --lewa_ramka_kanalow_ostrosc: 15px;   /* 0px - prosta kreska   1px+ - zaokrąglone */
+  --lewa_ramka_kanalow_grubosc: 2px;   /* 0px - prosta kreska   1px+ - zaokrąglone */
 }
 
 
@@ -95,7 +97,7 @@ body::before {
 .container_c18ec9{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 11px;}
 .categoryList_c6ee36{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 5px;border-left: none;border-bottom: none;}
 .inner_effbe2{border: 1px solid var(--obramowki-kolor);border-radius: 8px;padding: 0px;}
-.panels_a4d4d9{border-radius: 10px;background-color: rgba(0, 0, 0, 0.4);}
+.panels_a4d4d9{border-radius: 10px;}
 .drawerSizingWrapper_af5dbb{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 8px;box-shadow: 0px 0px 10px var(--color_neon_detail),0px 0px 20px var(--color_neon_detail);}
 /*ikonka profilu i w jaka gre sie gra obramowka*/
 .container_b2ca13{border-radius: 15px;background-color: rgba(0, 0, 0, 0.6);}    .activityPanel_a4d4d9{border-radius: 15px;background-color: rgba(0, 0, 0, 0.6);}
@@ -134,8 +136,8 @@ text-shadow: 0px 1px 20px var(--color_folder_font);
   background: var(--color_wybranego_kanalu_i_przezroczystosc);
   -webkit-clip-path: polygon(var(--cp-size) 0, 100% 0, 100% calc(100% - var(--cp-size)), calc(100% - var(--cp-size)) 100%, 0 100%, 0 var(--cp-size));
           clip-path: polygon(var(--cp-size) 0, 100% 0, 100% calc(100% - var(--cp-size)), calc(100% - var(--cp-size)) 100%, 0 100%, 0 var(--cp-size));
-  --cp-size: 10px;
-  margin-right: 4px !important;
+  --cp-size: 15px;
+  margin-right: 4px !important; margin-left: -2px;
 }
 /* kolor tekstu zaznaczonego kanalu */
 .modeSelected_d8bfb3 .name_d8bfb3, .modeSelected_d8bfb3:hover .name_d8bfb3, .modeConnected_d8bfb3 .name_d8bfb3, .modeConnected_d8bfb3:hover .name_d8bfb3, .modeUnreadImportant_d8bfb3 .name_d8bfb3, .modeUnreadImportant_d8bfb3:hover .name_d8bfb3{
@@ -147,11 +149,26 @@ color: var(--color_zaznaczony_kanal);
   height: 18px;
   color: var(--color_folder_font);
 }
+/* panel rozmowy */
+.container_adcaac{border-radius: 15px;background-color: rgba(0, 0, 0, 0.6);}
+#channels > ul > div.sectionDivider_c43953{background-color: var(--obramowki-kolor);}
+/* lewa ramka kanałów */
+.link_d8bfb3:before{border: var(--lewa_ramka_kanalow_grubosc) solid var(--obramowki-kolor);border-radius: var(--lewa_ramka_kanalow_ostrosc);border-top: none;border-bottom: none;border-right: none;}
 
 
-
-
-
+.container_a4d4d9{margin-bottom: 4px;margin-right:4px;margin-left: 4px;border-radius: 8px;}
+/* wyświetlana data kiedy grupa wiadomości została wysłana */
+.content_c2654d{border: 2px solid var(--obramowki-kolor);border-radius: 15px;padding-left: 15px;padding-right:15px;color: rgb(204, 204, 204);}
+#app-mount > div.appAsidePanelWrapper_bd26cc > div.pictureInPicture_e0c856 > div{border: var(--grubosc_obramowek_okien) solid var(--obramowki-kolor);border-radius: 8px;box-shadow: 0px 0px 10px var(--color_neon_detail),0px 0px 20px var(--color_neon_detail);}
+/*ustawienia*/
+.sidebarScrollable_ff90b2+.content_ff90b2{margin-left:280px;}
+.customColumn_c25c6d, .contentColumn_c25c6d{max-width: 900px;}
+.scroller_ff90b2{background-color: transparent;}
+/* panel rozmowy buttons */
+.wrapper_adcaac{}
+.container_adcaac{height: 80px;}
+.actionButtons_adcaac{padding-top: 10px;}
+.lookFilled_dd4f85.colorBrand_dd4f85{border: var(--grubosc_obramowek_tekstu_guzikow) solid var(--obramowki-kolor);border-radius: 13px;}
 
 
 
@@ -215,5 +232,3 @@ color: var(--color_zaznaczony_kanal);
 
 /*usunięcie czarnego gówna na górze ekranu :)*/
 .theme-dark .children_fc4f04:after {background:rgba(0, 0, 0, 0);}
-
-
