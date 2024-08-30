@@ -16,6 +16,8 @@
   --color_zaznaczony_kanal: rgb(255, 0, 170);
   --main-color: rgb(66, 66, 52);
   --icon_color: rgb(4, 255, 4);
+  --color_tytulow_naglowkow: #b901e2;
+  --color_neon_detail: #b901e2;
   --backgroung_image_blur: 5px;
   --grubosc_obramowek_tekstu_guzikow: 3px;
   --grubosc_obramowek_okien: 2px;
@@ -23,7 +25,9 @@
   --color_font: red;
   --color_folder_font: #b901e2;
   --color_wybranego_kanalu_i_przezroczystosc: rgba(114, 6, 187, 0.4);
-  --bd_image_url: url('https://i.imgur.com/aSr9Dg4.jpeg');
+  --bd_image_url: url('https://i.imgur.com/qZJakb7.jpeg');
   --menu_icon: url('https://i.imgur.com/AXgjrd6.png');
   --home-position: center;
+  --lewa_ramka_kanalow_ostrosc: 15px;   /* 0px - prosta kreska   1px+ - zaokrąglone */
+  --lewa_ramka_kanalow_grubosc: 2px;   /* 0px - prosta kreska   1px+ - zaokrąglone */
 }
