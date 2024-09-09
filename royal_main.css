@@ -9,19 +9,17 @@
 
 :root{ /*zmienne kolorów i inne wyglądy discorda do zmiany*/
   --obramowki-kolor: #b901e2;
-  --color_zaznaczony_kanal: rgb(255, 0, 170);
-  --main-color: rgb(66, 66, 52);
-  --icon_color: rgb(4, 255, 4);
   --color_tytulow_naglowkow: #b901e2;
   --color_neon_detail: #b901e2;
-  --backgroung_image_blur: 5px;
   --grubosc_obramowek_tekstu_guzikow: 3px;
   --grubosc_obramowek_okien: 2px;
-  --przezroczystosc_tla_programu_i_kolor: rgba(10, 0, 12, 0.2); /* podawać liczby z kropką */
   --color_font: red;
   --color_folder_font: #b901e2;
   --color_wybranego_kanalu_i_przezroczystosc: rgba(114, 6, 187, 0.4);
+  --color_tekst_zaznaczony_kanal: rgb(255, 0, 170);
   --bd_image_url: url('https://i.imgur.com/qZJakb7.jpeg');
+  --przezroczystosc_tla_programu_i_kolor: rgba(10, 0, 12, 0.2); /* podawać liczby z kropką */
+  --backgroung_image_blur: 5px;
   --menu_icon: url('https://i.imgur.com/AXgjrd6.png');
   --home-position: center;
   --lewa_ramka_kanalow_ostrosc: 15px;   /* 0px - prosta kreska   1px+ - zaokrąglone */
@@ -141,7 +139,7 @@ text-shadow: 0px 1px 20px var(--color_folder_font);
 }
 /* kolor tekstu zaznaczonego kanalu */
 .modeSelected_d8bfb3 .name_d8bfb3, .modeSelected_d8bfb3:hover .name_d8bfb3, .modeConnected_d8bfb3 .name_d8bfb3, .modeConnected_d8bfb3:hover .name_d8bfb3, .modeUnreadImportant_d8bfb3 .name_d8bfb3, .modeUnreadImportant_d8bfb3:hover .name_d8bfb3{
-color: var(--color_zaznaczony_kanal);
+color: var(--color_tekst_zaznaczony_kanal);
 }
 /* strzałki przy folderach */
 .icon_a08117{
