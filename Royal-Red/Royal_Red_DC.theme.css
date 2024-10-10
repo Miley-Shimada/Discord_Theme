@@ -1,0 +1,31 @@
+/**
+ * @name Royal_Red_DC_theme
+ * @author Miley
+ * @version 0.0.2
+ * @description Czerwony theme
+ * @source https://github.com/Miley-Shimada/Discord_Theme
+*/
+
+/* IMPORT CSS FROM GITHUB */
+@import url('https://miley-shimada.github.io/Discord_Theme/royal_main.css');
+
+
+
+:root{ /*zmienne kolorów i inne wyglądy discorda do zmiany*/
+  --obramowki-kolor: #d30404;
+  --color_tytulow_naglowkow: #d30404;
+  --color_neon_detail: #d40000;
+  --grubosc_obramowek_tekstu_guzikow: 3px;
+  --grubosc_obramowek_okien: 2px;
+  --color_font: #ff0202;
+  --color_folder_font: #ff0202;
+  --color_wybranego_kanalu_i_przezroczystosc: rgba(226, 7, 7, 0.589);
+  --color_tekst_zaznaczony_kanal: rgb(255, 94, 0);
+  --bd_image_url: url('https://i.imgur.com/mcypuyB.png');
+  --przezroczystosc_tla_programu_i_kolor: rgba(12, 0, 0, 0.-); /* podawać liczby z kropką */
+  --backgroung_image_blur: 4px;
+  --menu_icon: url('https://i.imgur.com/AXgjrd6.png');
+  --home-position: center;
+  --lewa_ramka_kanalow_ostrosc: 15px;   /* 0px - prosta kreska   1px+ - zaokrąglone */
+  --lewa_ramka_kanalow_grubosc: 2px;   /* 0px - prosta kreska   1px+ - zaokrąglone */
+}
